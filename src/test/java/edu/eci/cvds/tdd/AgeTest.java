@@ -30,13 +30,27 @@ public class AgeTest {
         catch (AgeException e){
             Assert.assertEquals(e.getMessage(),AgeException.invalidAge);
         }
+        try{
+            boolean result = validator.underAge(20000);
+            Assert.fail("Invalid age");
+        }
+        catch (AgeException e){
+            Assert.assertEquals(e.getMessage(),AgeException.invalidAge);
+        }
+        try{
+            boolean result = validator.underAge(136);
+            Assert.fail("Invalid age");
+        }
+        catch (AgeException e){
+            Assert.assertEquals(e.getMessage(),AgeException.invalidAge);
+        }
 
     }
     @Test
     public void notUnderAge() throws AgeException {
         boolean result = validator.underAge(18);
         Assert.assertFalse(result);
-        result = validator.underAge(20000);
+        result = validator.underAge(130);
         Assert.assertFalse(result);
     }
 
