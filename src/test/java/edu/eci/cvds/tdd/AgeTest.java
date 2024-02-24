@@ -14,7 +14,7 @@ public class AgeTest {
         Assert.assertTrue(result);
     }
     @Test
-    public void invalidAge() throws AgeException {
+    public void invalidAge()  {
         try{
             boolean result = validator.underAge(-1);
             Assert.fail("Invalid age");

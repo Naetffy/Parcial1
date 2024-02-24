@@ -4,7 +4,7 @@ public class AgeValidator {
     public boolean underAge(int age) throws AgeException{
 
         boolean res = true;
-
+    /*
         if(age < 0 || age > 135){
             throw new AgeException(AgeException.invalidAge);
         }
@@ -13,7 +13,7 @@ public class AgeValidator {
         }
         else{
             res = false;
-        }
+        }*/
         return res;
     }
 
