@@ -2,6 +2,7 @@ package edu.eci.cvds.tdd;
 
 public class AgeValidator {
     public boolean underAge(int age) throws AgeException{
+        /*
         boolean res;
         if(age < 0){
             throw new AgeException(AgeException.invalidAge);
@@ -13,5 +14,7 @@ public class AgeValidator {
             res = false;
         }
         return res;
+        */
     }
+
 }
