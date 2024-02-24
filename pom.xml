@@ -19,34 +19,30 @@
         <version>4.13.2</version>
         <scope>test</scope>
     </dependency>
-    <dependency>
-        <groupId>edu.eci.cvds</groupId>
-        <artifactId>aerodescuentos</artifactId>
-        <version>1.0.0</version>
-    </dependency>
+
   </dependencies>
 
   <build>
-    <plugins>
-		  <plugin>
-	      <groupId>org.codehaus.mojo</groupId>
-	      <artifactId>exec-maven-plugin</artifactId>
-	      <version>3.0.0</version>
-	      <configuration>
-	        <mainClass>edu.eci.cvds.tdd.AppTest</mainClass>
-	      </configuration>
-	    </plugin>
+      <plugins>
+          <plugin>
+              <groupId>org.codehaus.mojo</groupId>
+              <artifactId>exec-maven-plugin</artifactId>
+              <version>3.0.0</version>
+              <configuration>
+                  <mainClass>edu.eci.cvds.tdd.AgeTest</mainClass>
+              </configuration>
+          </plugin>
 
-      <plugin>
-	      <groupId>org.apache.maven.plugins</groupId>
-	      <artifactId>maven-surefire-plugin</artifactId>
-	      <version>2.22.2</version>
-	      <configuration>
-          <includes>
-	          <include>**/registry/RegistryTest.java</include>
-          </includes>
-        </configuration>
-	    </plugin>
-    </plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <version>2.22.2</version>
+              <configuration>
+                  <includes>
+                      <include>**/AgeTest.java</include>
+                  </includes>
+              </configuration>
+          </plugin>
+      </plugins>
   </build>
 </project>
